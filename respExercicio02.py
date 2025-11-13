@@ -1,16 +1,15 @@
-class aluno:
-    def __init__(self, nome, matricula, curso, disciplina=None, notas=None):
+class Aluno:
+    def __init__(self, nome, matricula, curso):
         self.nome = nome
         self.matricula = matricula
         self.curso = curso
-        self.disciplina = disciplina
-        self.notas = notas if notas is not None else []
+        self.notas = []
 
     def adicionar_nota(self, nota):
         self.notas.append(nota)
 
     def calcular_media(self):
-        if not self.notas:
+        if len(self.notas) == 0:
             return 0
         return sum(self.notas) / len(self.notas)
     
@@ -22,12 +21,13 @@ class aluno:
             return "Recuperação"
         else:
             return "Reprovado"
-        
-aluno.adicionar_nota(8.5)
-aluno.adicionar_nota(7.0)
-aluno.adicionar_nota(9.2)
-print(f"Média: {aluno.calcular_media()}")
-print(f"Status: {aluno.status()}")
+
+alunoTeste = Aluno("Carlos Silva", "2023003", "Matemática")
+alunoTeste.adicionar_nota(8)
+alunoTeste.adicionar_nota(7)
+alunoTeste.adicionar_nota(9)
+print(f"Média: {alunoTeste.calcular_media()}")
+print(f"Status: {alunoTeste.status()}")
 
 
 
