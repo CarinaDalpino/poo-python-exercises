@@ -18,14 +18,13 @@ class Professor:
     def exibir_informacoes(self):
         return f"Professor: {self.nome}, Departamento: {self.departamento}, Salário: R$ {self._salario:.2f}"
 
-
-
-professor = Professor ("Dr. Silva", "Computacao", 5000.00)
-print(f"salario atual: {professor.salario}")
-professor.salario = 6000.00  
-print(f"novo salario: {professor.salario}")
-professor.salario -1000.00
-print(f"salario apos tentativa invalida: {professor.salario}")
+if __name__ == "__main__":
+    professor = Professor("Dr. Silva", "Computacao", 5000.00)
+    print(f"salario atual: {professor.salario}")
+    professor.salario = 6000.00  
+    print(f"novo salario: {professor.salario}")
+    professor.salario = -1000.00
+    print(f"salario apos tentativa invalida: {professor.salario}")
 
 
     

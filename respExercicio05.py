@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__(self, nome, cpf, data_nascimento):
+    def __init__(self, nome, cpf, data_nascimento): # def = criar
         self.nome = nome
         self.cpf = cpf
         self.data_nascimento = data_nascimento
@@ -17,14 +17,14 @@ class Funcionario(Pessoa):
             print(f"Data de Nascimento: {self.data_nascimento}")
             print(f"Cargo: {self.cargo}")
             print(f"Salário: R$ {self.salario:.2f}")
-
-funcionario = Funcionario(
+if __name__ == "__main__":
+  funcionario = Funcionario(
                         "Ana Costa",
                         "111.222.333-44", 
                         "20/03/1988", 
                         "Coordenadora", 
                         4500.0)
-funcionario.exibir_dados()
+  funcionario.exibir_dados()
 
 
 

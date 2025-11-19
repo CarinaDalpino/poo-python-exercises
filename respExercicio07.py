@@ -1,5 +1,5 @@
 
-class aluno:
+class Aluno:
     def __init__(self, nome, matricula, curso):
         self.nome = nome
         self.matricula = matricula
@@ -15,7 +15,7 @@ class aluno:
                 print(f"- {d.nome_disciplina} (Código: {d.codigo_disciplina})")
             print()
 
-class disciplina:
+class Disciplina:
     def __init__(self, nome_disciplina, codigo_disciplina, carga_horaria):
         self.nome_disciplina = nome_disciplina
         self.codigo_disciplina = codigo_disciplina
@@ -39,12 +39,12 @@ class secretaria:
         if aluno not in disciplina.alunos_matriculados:
             disciplina.alunos_matriculados.append(aluno)
 
-if __name__ == "__main__":
+if __name__ == "__main__": #executa o código
 
-    aluno1 = aluno("João Silva", "2023001", "Engenharia de Software")
-    aluno2 = aluno("Maria Santos", "2023002", "Ciência da Computação")
-    disciplina1 = disciplina("POO", "POO001", 60)
-    disciplina2 = disciplina("Banco de Dados", "BD001", 80)
+    aluno1 = Aluno("João Silva", "2023001", "Engenharia de Software")
+    aluno2 = Aluno("Maria Santos", "2023002", "Ciência da Computação")
+    disciplina1 = Disciplina("POO", "POO001", 60)
+    disciplina2 = Disciplina("Banco de Dados", "BD001", 80)
 
     secretaria.inscrever_aluno(aluno1, disciplina1)
     secretaria.inscrever_aluno(aluno1, disciplina2)

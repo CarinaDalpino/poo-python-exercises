@@ -1,8 +1,8 @@
-class Pessoa: # pessoa minuscula = Pessao maiuscula
+class Pessoa: # pessoa minuscula = Pessoa maiuscula
     def __init__(self, nome, idade):
         self.nome = nome  # pendente self.
         self.idade = idade
-        self.cpf = None  # self.cpf
+        self.cpf = None  # self.cpf = privado, não foi declarado no init, ficando como futuro atributo
 
     def apresentar(self):  # self):
         return f"Olá, sou {self.nome}"

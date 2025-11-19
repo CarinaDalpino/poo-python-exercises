@@ -25,9 +25,9 @@ class Tutor(Pessoa):
 
 # Testando as classes com polimorfismo
 
-Funcionario("João Silva", "123.456.789-00", "01/01/1990", "Secretário"),
-Tutor("Maria Santos", "987.654.321-00", "15/05/1985", "Programação")
+f1 = Funcionario("João Silva", "123.456.789-00", "01/01/1990", "Secretário")
+t1 = Tutor("Maria Santos", "987.654.321-00", "15/05/1985", "Programação")
 
-print(Funcionario.apresentar(Funcionario))
-print(Tutor.apresentar(Tutor))
+print(f1.apresentar())
+print(t1.apresentar())
         
