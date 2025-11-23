@@ -31,7 +31,7 @@ class Disciplina:
                 print(f"- {a.nome} (Matrícula: {a.matricula})")
             print()
 
-class secretaria:
+class Secretaria:
     @staticmethod
     def inscrever_aluno(aluno, disciplina):
         if disciplina not in aluno.disciplinas_inscritas:
@@ -46,9 +46,9 @@ if __name__ == "__main__": #executa o código
     disciplina1 = Disciplina("POO", "POO001", 60)
     disciplina2 = Disciplina("Banco de Dados", "BD001", 80)
 
-    secretaria.inscrever_aluno(aluno1, disciplina1)
-    secretaria.inscrever_aluno(aluno1, disciplina2)
-    secretaria.inscrever_aluno(aluno2, disciplina1)
+    Secretaria.inscrever_aluno(aluno1, disciplina1)
+    Secretaria.inscrever_aluno(aluno1, disciplina2)
+    Secretaria.inscrever_aluno(aluno2, disciplina1)
 
     aluno1.listar_disciplinas()
     disciplina1.listar_alunos()

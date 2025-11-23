@@ -2,7 +2,8 @@ class Pessoa:
     def __init__(self, nome, cpf, data_nascimento): # def = criar
         self.nome = nome
         self.cpf = cpf
-        self.data_nascimento = data_nascimento
+        self.data_nascimento = data_nascimento      
+
 
 class Funcionario(Pessoa):
     def __init__(self, nome, cpf, data_nascimento, cargo, salario):
